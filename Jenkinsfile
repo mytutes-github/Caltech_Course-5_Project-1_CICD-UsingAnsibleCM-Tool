@@ -1,4 +1,4 @@
-currentBuild.displayName = "Course5Project1_Ansible-CICD_#"+currentBuild.number
+currentBuild.displayName = "Course5Project1_Ansible_CI-CD_Build#"+currentBuild.number
 
 node {
     
