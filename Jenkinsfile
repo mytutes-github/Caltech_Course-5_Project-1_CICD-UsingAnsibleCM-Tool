@@ -1,8 +1,8 @@
-currentBuild.displayName = "Course4Project3_CI-CD-Workflow_#"+currentBuild.number
+currentBuild.displayName = "Course5Project1_Ansible-CICD_#"+currentBuild.number
 
 node {
     
-    def mvnHome = tool name: 'Apache_Maven_3.5.3', type: 'maven'    
+    def mvnHome = tool name: 'Apache_Maven_3.5.2', type: 'maven'    
     def mvnCMD = "${mvnHome}/bin/mvn"
      
     stage('Clean Up') {
@@ -57,7 +57,7 @@ node {
 
   stage('Deploy Docker Container'){
 
-    ansiblePlaybook credentialsId: 'Ansible-CICD', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 'deploy-docker.yml'
+   ansiblePlaybook credentialsId: 'Ansible-CICD', disableHostKeyChecking: true, installation: 'Ansible2', inventory: 'dev.inv', playbook: 'deploy-docker.yml'
 
     }
     
